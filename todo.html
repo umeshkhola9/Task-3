@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Todo — Sochit Web Studio</title>
+        <link rel="stylesheet" href="css/style.css" />
+        <script>
+            document.documentElement.setAttribute(
+                "data-theme",
+                localStorage.getItem("theme") || "light"
+            );
+        </script>
+    </head>
+    <body>
+        <header>
+            <nav class="navbar">
+                <div class="logo-title">
+                    <img
+                        src="images/logo.png"
+                        alt="Sochit Web Studio logo"
+                        class="logo"
+                    />
+                    <h2 class="title">Sochit Web Studio</h2>
+                </div>
+                <div class="navbar-controls">
+                    <button
+                        id="theme-toggle"
+                        aria-label="Toggle dark/light mode"
+                    >
+                        🌙 Dark Mode
+                    </button>
+                    <button
+                        id="hamburger"
+                        aria-label="Toggle navigation menu"
+                        aria-expanded="false"
+                    >
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                    </button>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="weather.html">Weather</a></li>
+                    <li><a href="todo.html" class="active">Todo</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            <!-- Todo Hero Banner -->
+            <section class="hero" style="padding: 60px 20px">
+                <h1>✅ Todo List</h1>
+                <p>
+                    Manage your tasks efficiently. Your tasks are saved
+                    automatically.
+                </p>
+            </section>
+
+            <!-- Todo App Section -->
+            <section class="todo-section">
+                <div class="todo-container">
+                    <!-- Add Task Input -->
+                    <div class="todo-input-box">
+                        <input
+                            type="text"
+                            id="todo-input"
+                            class="todo-input"
+                            placeholder="Add a new task…"
+                            aria-label="New task"
+                            maxlength="200"
+                        />
+                        <button id="add-task-btn" class="btn todo-add-btn">
+                            + Add Task
+                        </button>
+                    </div>
+
+                    <!-- Validation Message -->
+                    <p
+                        id="todo-validation-msg"
+                        class="todo-validation hidden"
+                        aria-live="polite"
+                    ></p>
+
+                    <!-- Filter Buttons -->
+                    <div
+                        class="todo-filters"
+                        role="group"
+                        aria-label="Task filters"
+                    >
+                        <button
+                            class="todo-filter-btn active"
+                            data-filter="all"
+                        >
+                            All Tasks
+                        </button>
+                        <button class="todo-filter-btn" data-filter="active">
+                            Active
+                        </button>
+                        <button class="todo-filter-btn" data-filter="completed">
+                            Completed
+                        </button>
+                    </div>
+
+                    <!-- Task Stats -->
+                    <div class="todo-stats">
+                        <span id="todo-count"></span>
+                        <button id="clear-completed-btn" class="todo-clear-btn">
+                            Clear Completed
+                        </button>
+                    </div>
+
+                    <!-- Task List -->
+                    <ul
+                        id="todo-list"
+                        class="todo-list"
+                        aria-label="Task list"
+                    ></ul>
+
+                    <!-- Empty State -->
+                    <div id="todo-empty" class="todo-empty hidden">
+                        <p>🎉 No tasks here! Add one above to get started.</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Back To Top Button -->
+        <button id="back-to-top" aria-label="Back to top"><b>↑</b></button>
+
+        <footer class="footer">
+            <ul class="footer-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="weather.html">Weather</a></li>
+                <li><a href="todo.html" class="active">Todo</a></li>
+            </ul>
+            <p>
+                Built with ❤️ for
+                <span class="company-name">ApexPlanet Software Pvt. Ltd.</span>
+                Internship – Task 3
+            </p>
+            <p class="tech-stack">HTML · CSS · JavaScript</p>
+        </footer>
+
+        <script src="js/script.js"></script>
+        <script src="js/todo.js"></script>
+    </body>
+</html>

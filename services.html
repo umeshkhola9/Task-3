@@ -1,0 +1,243 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Services</title>
+        <link rel="stylesheet" href="css/style.css" />
+        <script>
+            document.documentElement.setAttribute(
+                "data-theme",
+                localStorage.getItem("theme") || "light"
+            );
+        </script>
+    </head>
+    <body>
+        <header>
+            <nav class="navbar">
+                <div class="logo-title">
+                    <img
+                        src="images/logo.png"
+                        alt="Sochit Web Studio logo"
+                        class="logo"
+                    />
+                    <h2 class="title">Sochit Web Studio</h2>
+                </div>
+                <div class="navbar-controls">
+                    <button
+                        id="theme-toggle"
+                        aria-label="Toggle dark/light mode"
+                    >
+                        🌙 Dark Mode
+                    </button>
+                    <button
+                        id="hamburger"
+                        aria-label="Toggle navigation menu"
+                        aria-expanded="false"
+                    >
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                    </button>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="services.html" class="active">Services</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="weather.html">Weather</a></li>
+                    <li><a href="todo.html">Todo</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            <section class="hero">
+                <h1>Our Services</h1>
+                <p>
+                    Simple web design and development services built with HTML,
+                    CSS, and JavaScript.
+                </p>
+            </section>
+
+            <section class="page-content">
+                <div class="cards">
+                    <article class="card">
+                        <h3>Website Design</h3>
+                        <p>
+                            Clean, simple layouts that look good on every
+                            device.
+                        </p>
+                    </article>
+                    <article class="card">
+                        <h3>Web Development</h3>
+                        <p>
+                            Building websites using HTML, CSS, and JavaScript.
+                        </p>
+                    </article>
+                    <article class="card">
+                        <h3>E-Commerce</h3>
+                        <p>Online stores with simple, easy-to-use checkouts.</p>
+                    </article>
+                    <article class="card">
+                        <h3>Responsive Design</h3>
+                        <p>
+                            Websites that work on mobile, tablet, and desktop.
+                        </p>
+                    </article>
+                    <article class="card">
+                        <h3>Contact Forms</h3>
+                        <p>Simple, working contact forms for any website.</p>
+                    </article>
+                    <article class="card">
+                        <h3>SEO Setup</h3>
+                        <p>
+                            Basic search engine optimization so people can find
+                            you.
+                        </p>
+                    </article>
+                </div>
+            </section>
+
+            <section class="table-content">
+                <h2>Pricing :</h2>
+                <table>
+                    <tr>
+                        <th>Plans</th>
+                        <th>Pages</th>
+                        <th>Price</th>
+                        <th>Support</th>
+                    </tr>
+                    <tr>
+                        <th>Starter</th>
+                        <td>Up to 5</td>
+                        <td>$1,200</td>
+                        <td>7 days</td>
+                    </tr>
+                    <tr>
+                        <th>Growth</th>
+                        <td>Up to 12</td>
+                        <td>$3,200</td>
+                        <td>30 days</td>
+                    </tr>
+                    <tr>
+                        <th>Enterprise</th>
+                        <td>Unlimited</td>
+                        <td>Custom quote</td>
+                        <td>Ongoing</td>
+                    </tr>
+                </table>
+                <br />
+            </section>
+
+            <aside class="info-box" aria-label="Free quote prompt">
+                <h2>Not Sure What You Need?</h2>
+                <p>
+                    Send us a message on our
+                    <a href="contact.html">Contact page</a> and we'll recommend
+                    the right plan for your project. Or click below to get a
+                    free instant quote.
+                </p>
+                <button class="btn-modal" data-modal-open>
+                    🎯 Get a Free Quote
+                </button>
+            </aside>
+
+            <section class="strengths">
+                <h2>Why Work With Us ?</h2>
+                <div class="strength-grid">
+                    <article class="strength-card">
+                        <h3>Fast Turnaround</h3>
+                        <p>Most websites are ready in 3-4 weeks.</p>
+                    </article>
+                    <article class="strength-card">
+                        <h3>Clean Code</h3>
+                        <p>Easy-to-read code that's simple to update later.</p>
+                    </article>
+                    <article class="strength-card">
+                        <h3>Responsive Layouts</h3>
+                        <p>Your site will work on every screen size.</p>
+                    </article>
+                    <article class="strength-card">
+                        <h3>Friendly Support</h3>
+                        <p>We're easy to reach if something needs fixing.</p>
+                    </article>
+                </div>
+            </section>
+        </main>
+
+        <!-- Modal Popup -->
+        <div
+            id="quote-modal"
+            class="modal-overlay"
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="modal-title"
+            aria-hidden="true"
+        >
+            <div class="modal-box">
+                <button class="modal-close" aria-label="Close modal">
+                    &times;
+                </button>
+                <h2 id="modal-title">🎯 Get a Free Quote</h2>
+                <p>
+                    Tell us about your project and we'll get back to you within
+                    24 hours with a custom quote.
+                </p>
+                <div class="modal-form">
+                    <input
+                        type="text"
+                        id="quote-name"
+                        placeholder="Your Name"
+                        aria-label="Your name"
+                    />
+
+                    <input
+                        type="email"
+                        id="quote-email"
+                        placeholder="Your Email"
+                        aria-label="Your email"
+                    />
+
+                    <select id="quote-service" aria-label="Select service">
+                        <option value="" disabled selected>
+                            Select a Service
+                        </option>
+                        <option>Website Design</option>
+                        <option>Web Development</option>
+                        <option>E-Commerce</option>
+                        <option>SEO Setup</option>
+                    </select>
+
+                    <p id="quote-status"></p>
+
+                    <button type="submit" id="quote-submit">
+                        Submit Request
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Back To Top Button -->
+        <button id="back-to-top" aria-label="Back to top"><b>↑</b></button>
+
+        <footer class="footer">
+            <ul class="footer-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html" class="active">Services</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="weather.html">Weather</a></li>
+                <li><a href="todo.html">Todo</a></li>
+            </ul>
+            <p>
+                Built with ❤️ for
+                <span class="company-name">ApexPlanet Software Pvt. Ltd.</span>
+                Internship – Task 3
+            </p>
+            <p class="tech-stack">HTML · CSS · JavaScript</p>
+        </footer>
+
+        <script src="js/script.js"></script>
+    </body>
+</html>

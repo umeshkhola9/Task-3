@@ -1,0 +1,313 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Home — Sochit Web Studio</title>
+        <link rel="stylesheet" href="css/style.css" />
+        <script>
+            document.documentElement.setAttribute(
+                "data-theme",
+                localStorage.getItem("theme") || "light"
+            );
+        </script>
+    </head>
+    <body>
+        <header>
+            <nav class="navbar">
+                <div class="logo-title">
+                    <img
+                        src="images/logo.png"
+                        alt="Sochit Web Studio logo"
+                        class="logo"
+                    />
+                    <h2 class="title">Sochit Web Studio</h2>
+                </div>
+                <div class="navbar-controls">
+                    <button
+                        id="theme-toggle"
+                        aria-label="Toggle dark/light mode"
+                    >
+                        🌙 Dark Mode
+                    </button>
+                    <button
+                        id="hamburger"
+                        aria-label="Toggle navigation menu"
+                        aria-expanded="false"
+                    >
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                    </button>
+                </div>
+                                <ul class="nav-links">
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="weather.html">Weather</a></li>
+                    <li><a href="todo.html">Todo</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            <!-- Hero -->
+            <section class="hero">
+                <h1>We Build Websites That Work</h1>
+                <p>
+                    Sochit Web Studio designs and builds simple, fast, and
+                    responsive websites using HTML, CSS, and JavaScript.
+                </p>
+                <a href="about.html" class="btn">Learn More</a>
+                &nbsp;&nbsp;
+                <button class="btn-modal" data-modal-open>
+                    🎯 Get a Free Quote
+                </button>
+            </section>
+
+            <!-- Image Slider / Carousel -->
+            <section class="slider-section">
+                <h2>Our Work Gallery</h2>
+                <div class="slider" role="region" aria-label="Image gallery">
+                    <div class="slides-track">
+                        <div class="slide">
+                            <img
+                                src="images/gallery1.jpeg"
+                                alt="Business website redesign"
+                            />
+                            <p class="slide-caption">
+                                Business Website Redesign
+                            </p>
+                        </div>
+                        <div class="slide">
+                            <img
+                                src="images/gallery2.jpeg"
+                                alt="E-commerce store"
+                            />
+                            <p class="slide-caption">E-Commerce Store</p>
+                        </div>
+                        <div class="slide">
+                            <img
+                                src="images/gallery3.png"
+                                alt="Web app dashboard"
+                            />
+                            <p class="slide-caption">Web App Dashboard</p>
+                        </div>
+                        <div class="slide">
+                            <img
+                                src="images/gallery4.jpeg"
+                                alt="Landing page design"
+                            />
+                            <p class="slide-caption">Landing Page Design</p>
+                        </div>
+                    </div>
+                    <button class="slider-prev" aria-label="Previous slide">
+                        &#10094;
+                    </button>
+                    <button class="slider-next" aria-label="Next slide">
+                        &#10095;
+                    </button>
+                    <div
+                        class="slider-dots"
+                        role="tablist"
+                        aria-label="Slides"
+                    ></div>
+                </div>
+            </section>
+
+            <!-- Cards -->
+            <section class="cards">
+                <article class="card">
+                    <h3>Web Design</h3>
+                    <p>
+                        We design clean, modern layouts that match your brand
+                        and are easy to navigate.
+                    </p>
+                </article>
+                <article class="card">
+                    <h3>Web Development</h3>
+                    <p>
+                        We build websites using HTML, CSS, and JavaScript that
+                        work well on every device.
+                    </p>
+                </article>
+                <article class="card">
+                    <h3>SEO Optimization</h3>
+                    <p>
+                        We structure pages so search engines can find and rank
+                        your website properly.
+                    </p>
+                </article>
+            </section>
+
+            <!-- Animated Counters -->
+            <section class="counters-section" id="counters">
+                <h2>Our Achievements</h2>
+                <div class="counters-grid">
+                    <div class="counter-card">
+                        <div class="counter-icon">🚀</div>
+                        <span
+                            class="counter-number"
+                            data-target="120"
+                            data-suffix="+"
+                            >0+</span
+                        >
+                        <p class="counter-label">Projects Completed</p>
+                    </div>
+                    <div class="counter-card">
+                        <div class="counter-icon">😊</div>
+                        <span
+                            class="counter-number"
+                            data-target="114"
+                            data-suffix="+"
+                            >0+</span
+                        >
+                        <p class="counter-label">Happy Clients</p>
+                    </div>
+                    <div class="counter-card">
+                        <div class="counter-icon">📅</div>
+                        <span
+                            class="counter-number"
+                            data-target="6"
+                            data-suffix=""
+                            >0</span
+                        >
+                        <p class="counter-label">Years of Experience</p>
+                    </div>
+                    <div class="counter-card">
+                        <div class="counter-icon">🏆</div>
+                        <span
+                            class="counter-number"
+                            data-target="15"
+                            data-suffix=""
+                            >0</span
+                        >
+                        <p class="counter-label">Team Members</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Quick Facts Aside -->
+            <aside class="info-box" aria-label="Quick facts about Sochit">
+                <h2>Quick Facts</h2>
+                <ul>
+                    <li><strong>Founded:</strong> 2019</li>
+                    <li><strong>Projects completed:</strong> 120+</li>
+                    <li><strong>Team members:</strong> 15</li>
+                    <li><strong>Based in:</strong> Austin, Texas</li>
+                </ul>
+            </aside>
+
+            <!-- Gallery Grid -->
+            <section class="gallery">
+                <h2>Our Work</h2>
+                <p style="text-align: center; margin-bottom: 20px">
+                    A few examples of websites we have designed and built.
+                </p>
+                <div class="gallery-grid">
+                    <figure>
+                        <img
+                            src="images/gallery1.jpeg"
+                            alt="Homepage design for a small business website"
+                        />
+                        <figcaption>Business website redesign</figcaption>
+                    </figure>
+                    <figure>
+                        <img
+                            src="images/gallery2.jpeg"
+                            alt="Product page layout for an online store"
+                        />
+                        <figcaption>E-commerce store</figcaption>
+                    </figure>
+                    <figure>
+                        <img
+                            src="images/gallery3.png"
+                            alt="Dashboard screen for a web application"
+                        />
+                        <figcaption>Web app dashboard</figcaption>
+                    </figure>
+                    <figure>
+                        <img
+                            src="images/gallery4.jpeg"
+                            alt="Landing page design for a marketing campaign"
+                        />
+                        <figcaption>Landing page</figcaption>
+                    </figure>
+                </div>
+            </section>
+        </main>
+
+        <!-- Modal Popup -->
+        <div
+            id="quote-modal"
+            class="modal-overlay"
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="modal-title"
+            aria-hidden="true"
+        >
+            <div class="modal-box">
+                <button class="modal-close" aria-label="Close modal">
+                    &times;
+                </button>
+                <h2 id="modal-title">🎯 Get a Free Quote</h2>
+                <p>
+                    Tell us about your project and we'll get back to you within
+                    24 hours with a custom quote.
+                </p>
+                <div class="modal-form">
+                    <input
+                        type="text"
+                        id="quote-name"
+                        placeholder="Your Name"
+                    />
+
+                    <input
+                        type="email"
+                        id="quote-email"
+                        placeholder="Your Email"
+                    />
+
+                    <select id="quote-service">
+                        <option value="" disabled selected>
+                            Select a Service
+                        </option>
+                        <option>Website Design</option>
+                        <option>Web Development</option>
+                        <option>E-Commerce</option>
+                        <option>SEO Setup</option>
+                    </select>
+
+                    <p id="quote-status" aria-live="polite"></p>
+
+                    <button type="submit" id="quote-submit">
+                        Submit Request
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Back To Top Button -->
+        <button id="back-to-top" aria-label="Back to top"><b>↑</b></button>
+
+        <footer class="footer">
+                        <ul class="footer-links">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="weather.html">Weather</a></li>
+                <li><a href="todo.html">Todo</a></li>
+            </ul>
+            <p>
+                Built with ❤️ for
+                <span class="company-name">ApexPlanet Software Pvt. Ltd.</span>
+                Internship – Task 3
+            </p>
+            <p class="tech-stack">HTML · CSS · JavaScript</p>
+        </footer>
+
+        <script src="js/script.js"></script>
+    </body>
+</html>

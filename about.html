@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>About</title>
+        <link rel="stylesheet" href="css/style.css" />
+        <script>
+            document.documentElement.setAttribute(
+                "data-theme",
+                localStorage.getItem("theme") || "light"
+            );
+        </script>
+    </head>
+    <body>
+        <header>
+            <nav class="navbar">
+                <div class="logo-title">
+                    <img
+                        src="images/logo.png"
+                        alt="Sochit Web Studio logo"
+                        class="logo"
+                    />
+                    <h2 class="title">Sochit Web Studio</h2>
+                </div>
+                <div class="navbar-controls">
+                    <button
+                        id="theme-toggle"
+                        aria-label="Toggle dark/light mode"
+                    >
+                        🌙 Dark Mode
+                    </button>
+                    <button
+                        id="hamburger"
+                        aria-label="Toggle navigation menu"
+                        aria-expanded="false"
+                    >
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                    </button>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html" class="active">About</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="weather.html">Weather</a></li>
+                    <li><a href="todo.html">Todo</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            <section class="hero">
+                <h1>About Us</h1>
+                <p>A small studio that builds simple, fast websites.</p>
+            </section>
+
+            <section class="cards">
+                <article class="card">
+                    <h2>Our Story</h2>
+                    <p>
+                        Sochit Web Studio started in 2019 when a small group of
+                        developers wanted to build websites that were simple,
+                        fast, and easy to update.
+                    </p>
+                </article>
+                <article class="card">
+                    <h2>Our Mission</h2>
+                    <p>
+                        To give every client a website that looks good, loads
+                        quickly, and is genuinely easy to maintain after launch.
+                    </p>
+                </article>
+            </section>
+
+            <!-- Animated Counters -->
+            <section class="counters-section" id="counters">
+                <div class="counters-grid">
+                    <div class="counter-card">
+                        <div class="counter-icon">🚀</div>
+                        <span
+                            class="counter-number"
+                            data-target="120"
+                            data-suffix="+"
+                            >0+</span
+                        >
+                        <p class="counter-label">Projects Completed</p>
+                    </div>
+                    <div class="counter-card">
+                        <div class="counter-icon">😊</div>
+                        <span
+                            class="counter-number"
+                            data-target="114"
+                            data-suffix="+"
+                            >0+</span
+                        >
+                        <p class="counter-label">Happy Clients</p>
+                    </div>
+                    <div class="counter-card">
+                        <div class="counter-icon">📅</div>
+                        <span
+                            class="counter-number"
+                            data-target="6"
+                            data-suffix=""
+                            >0</span
+                        >
+                        <p class="counter-label">Years of Experience</p>
+                    </div>
+                    <div class="counter-card">
+                        <div class="counter-icon">👨‍💻</div>
+                        <span
+                            class="counter-number"
+                            data-target="15"
+                            data-suffix=""
+                            >0</span
+                        >
+                        <p class="counter-label">Team Members</p>
+                    </div>
+                </div>
+            </section>
+
+            <aside class="info-box" aria-label="Did you know facts">
+                <h2>Did You Know?</h2>
+                <ul>
+                    <li>We have completed over 120 projects.</li>
+                    <li>Our team has 12 designers and 3 developers.</li>
+                    <li>We have been building websites since 2019.</li>
+                </ul>
+            </aside>
+
+            <section class="skills">
+                <h2><u>Technologies We Use</u></h2>
+                <ul class="skills-grid">
+                    <li class="skill">HTML5</li>
+                    <li class="skill">CSS3</li>
+                    <li class="skill">JavaScript</li>
+                    <li class="skill">Responsive Design</li>
+                    <li class="skill">Git &amp; GitHub</li>
+                    <li class="skill">SEO Basics</li>
+                </ul>
+            </section>
+
+            <section class="strengths">
+                <h2>Our Values :</h2>
+                <div class="strength-grid">
+                    <article class="strength-card">
+                        <h3>Quality</h3>
+                        <p>We take care over every page we build.</p>
+                    </article>
+                    <article class="strength-card">
+                        <h3>Communication</h3>
+                        <p>We keep clients updated at every step.</p>
+                    </article>
+                    <article class="strength-card">
+                        <h3>Reliability</h3>
+                        <p>We deliver projects on time, every time.</p>
+                    </article>
+                    <article class="strength-card">
+                        <h3>Simplicity</h3>
+                        <p>We avoid adding things a website doesn't need.</p>
+                    </article>
+                </div>
+            </section>
+
+            <section class="page-content">
+                <h2>Our Goal :-</h2>
+                <p>
+                    To help small and growing businesses get a website that
+                    helps them, instead of one that just sits there looking
+                    nice.
+                </p>
+            </section>
+        </main>
+
+        <!-- Back To Top Button -->
+        <button id="back-to-top" aria-label="Back to top"><b>↑</b></button>
+
+        <footer class="footer">
+            <ul class="footer-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html" class="active">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="weather.html">Weather</a></li>
+                <li><a href="todo.html">Todo</a></li>
+            </ul>
+            <p>
+                Built with ❤️ for
+                <span class="company-name">ApexPlanet Software Pvt. Ltd.</span>
+                Internship – Task 3
+            </p>
+            <p class="tech-stack">HTML · CSS · JavaScript</p>
+        </footer>
+
+        <script src="js/script.js"></script>
+    </body>
+</html>

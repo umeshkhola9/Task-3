@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Contact — Sochit Web Studio</title>
+        <link rel="stylesheet" href="css/style.css" />
+        <script>
+            document.documentElement.setAttribute(
+                "data-theme",
+                localStorage.getItem("theme") || "light"
+            );
+        </script>
+    </head>
+    <body>
+        <header>
+            <nav class="navbar">
+                <div class="logo-title">
+                    <img
+                        src="images/logo.png"
+                        alt="Sochit Web Studio logo"
+                        class="logo"
+                    />
+                    <h2 class="title">Sochit Web Studio</h2>
+                </div>
+                <div class="navbar-controls">
+                    <button
+                        id="theme-toggle"
+                        aria-label="Toggle dark/light mode"
+                    >
+                        🌙 Dark Mode
+                    </button>
+                    <button
+                        id="hamburger"
+                        aria-label="Toggle navigation menu"
+                        aria-expanded="false"
+                    >
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                    </button>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="contact.html" class="active">Contact</a></li>
+                    <li><a href="weather.html">Weather</a></li>
+                    <li><a href="todo.html">Todo</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            <section class="hero">
+                <h1>Contact Us</h1>
+                <p>Tell us about your project and we'll get back to you.</p>
+            </section>
+
+            <section class="page-content">
+                <h2>Send Us a Message :-</h2>
+                <form class="contact-form" id="contact-form" novalidate>
+                    <label for="name">Name :</label>
+                    <input
+                        type="text"
+                        id="name"
+                        name="name"
+                        placeholder="Enter your Name (min. 3 characters)"
+                        required
+                        autocomplete="name"
+                    />
+
+                    <label for="email">Email :</label>
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        placeholder="Enter your Email"
+                        required
+                        autocomplete="email"
+                    />
+
+                    <label for="phone">Phone :</label>
+                    <input
+                        type="tel"
+                        id="phone"
+                        name="phone"
+                        placeholder="Enter your 10-digit Phone Number"
+                        autocomplete="tel"
+                        maxlength="10"
+                    />
+
+                    <label for="message">Message :</label>
+                    <textarea
+                        id="message"
+                        name="message"
+                        placeholder="Your Message (max 200 characters)"
+                        required
+                        maxlength="200"
+                    ></textarea>
+                    <span id="char-counter">0 / 200 characters</span>
+
+                    <button type="submit">Send Message</button>
+                </form>
+
+                <p
+                    id="form-status"
+                    aria-live="polite"
+                    style="
+                        text-align: center;
+                        font-weight: bold;
+                        margin-top: 10px;
+                    "
+                ></p>
+
+                <h2>Office Hours :-</h2>
+                <table>
+                    <caption>
+                        When you can reach us :
+                    </caption>
+                    <tr>
+                        <th>Monday - Friday</th>
+                        <td>9:00 AM - 6:00 PM</td>
+                    </tr>
+                    <tr>
+                        <th>Saturday</th>
+                        <td>By appointment</td>
+                    </tr>
+                    <tr>
+                        <th>Sunday</th>
+                        <td>Closed</td>
+                    </tr>
+                </table>
+            </section>
+
+            <aside class="location-box" aria-label="Our location">
+                <h2>Our Location :</h2>
+                <p></p>
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7026.47264655922!2d76.43246410252465!3d28.291164503411572!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3912a0be8d1713b1%3A0xa3540c7e63eacaa1!2sMasit%2C%20Haryana%20123411!5e0!3m2!1sen!2sin!4v1781422133853!5m2!1sen!2sin"
+                    loading="lazy"
+                    title="Our office location"
+                ></iframe>
+            </aside>
+        </main>
+
+        <!-- Back To Top Button -->
+        <button id="back-to-top" aria-label="Back to top"><b>↑</b></button>
+
+        <footer class="footer">
+            <ul class="footer-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
+                <li><a href="weather.html">Weather</a></li>
+                <li><a href="todo.html">Todo</a></li>
+            </ul>
+            <p>
+                Built with ❤️ for
+                <span class="company-name">ApexPlanet Software Pvt. Ltd.</span>
+                Internship – Task 3
+            </p>
+            <p class="tech-stack">HTML · CSS · JavaScript</p>
+        </footer>
+
+        <script src="js/script.js"></script>
+    </body>
+</html>

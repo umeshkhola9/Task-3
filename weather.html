@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Weather — Sochit Web Studio</title>
+        <link rel="stylesheet" href="css/style.css" />
+        <script>
+            document.documentElement.setAttribute(
+                "data-theme",
+                localStorage.getItem("theme") || "light"
+            );
+        </script>
+    </head>
+    <body>
+        <header>
+            <nav class="navbar">
+                <div class="logo-title">
+                    <img
+                        src="images/logo.png"
+                        alt="Sochit Web Studio logo"
+                        class="logo"
+                    />
+                    <h2 class="title">Sochit Web Studio</h2>
+                </div>
+                <div class="navbar-controls">
+                    <button
+                        id="theme-toggle"
+                        aria-label="Toggle dark/light mode"
+                    >
+                        🌙 Dark Mode
+                    </button>
+                    <button
+                        id="hamburger"
+                        aria-label="Toggle navigation menu"
+                        aria-expanded="false"
+                    >
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                    </button>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="weather.html" class="active">Weather</a></li>
+                    <li><a href="todo.html">Todo</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            <!-- Weather Hero Banner -->
+            <section class="hero" style="padding: 60px 20px">
+                <h1>🌤️ Weather App</h1>
+                <p>Search live weather conditions for any city in the world.</p>
+            </section>
+
+            <!-- Weather App Section -->
+            <section class="weather-section">
+                <div class="weather-container">
+                    <!-- Search Box -->
+                    <div class="weather-search-box">
+                        <input
+                            type="text"
+                            id="city-input"
+                            class="weather-input"
+                            placeholder="Enter city name (e.g. London, Tokyo...)"
+                            aria-label="City name"
+                        />
+                        <button id="search-btn" class="btn weather-search-btn">
+                            🔍 Search
+                        </button>
+                    </div>
+
+                    <!-- Loading Indicator -->
+                    <div
+                        id="weather-loading"
+                        class="weather-loading hidden"
+                        aria-live="polite"
+                    >
+                        <div class="weather-spinner"></div>
+                        <p>Fetching weather data…</p>
+                    </div>
+
+                    <!-- Error Message -->
+                    <div
+                        id="weather-error"
+                        class="weather-error hidden"
+                        aria-live="assertive"
+                        role="alert"
+                    ></div>
+
+                    <!-- Weather Result Card -->
+                    <div id="weather-result" class="weather-card hidden">
+                        <div class="weather-card-header">
+                            <div>
+                                <h2 id="city-name" class="weather-city"></h2>
+                                <p id="weather-desc" class="weather-desc"></p>
+                            </div>
+                            <img
+                                id="weather-icon"
+                                src=""
+                                alt="Weather icon"
+                                class="weather-icon"
+                            />
+                        </div>
+                        <div class="weather-temp-row">
+                            <span id="weather-temp" class="weather-temp"></span>
+                        </div>
+                        <div class="weather-details-grid">
+                            <div class="weather-detail">
+                                <span class="weather-detail-icon">💧</span>
+                                <span class="weather-detail-label"
+                                    >Humidity</span
+                                >
+                                <span
+                                    id="weather-humidity"
+                                    class="weather-detail-value"
+                                ></span>
+                            </div>
+                            <div class="weather-detail">
+                                <span class="weather-detail-icon">💨</span>
+                                <span class="weather-detail-label"
+                                    >Wind Speed</span
+                                >
+                                <span
+                                    id="weather-wind"
+                                    class="weather-detail-value"
+                                ></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Back To Top Button -->
+        <button id="back-to-top" aria-label="Back to top"><b>↑</b></button>
+
+        <footer class="footer">
+            <ul class="footer-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="weather.html" class="active">Weather</a></li>
+                <li><a href="todo.html">Todo</a></li>
+            </ul>
+            <p>
+                Built with ❤️ for
+                <span class="company-name">ApexPlanet Software Pvt. Ltd.</span>
+                Internship – Task 3
+            </p>
+            <p class="tech-stack">HTML · CSS · JavaScript</p>
+        </footer>
+
+        <script src="js/script.js"></script>
+        <script src="js/weather.js"></script>
+    </body>
+</html>
